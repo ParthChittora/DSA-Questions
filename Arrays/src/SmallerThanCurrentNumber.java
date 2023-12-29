@@ -17,7 +17,7 @@ public class SmallerThanCurrentNumber {
         //    }
 
     // Below approach will take less time but more space
-    // Complex to understand 
+    // Complex to understand
         public static int[] smallerNumbersThanCurrent(int[] nums) {
         int[] smaller = new int[nums.length];
         int[] counter = new int[101];
