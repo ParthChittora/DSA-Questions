@@ -15,29 +15,15 @@ public class TargetArrayObtainedByRotation {
                 ans[j][arr.length-i-1]=arr[i][j];
             }
         }
-        for (int[] a: ans
-             ) {
-            for (int el: a
-                 ) {
-                System.out.print(el+ " ");
-            }
-            System.out.println();
-
-        }
         return ans;
     }
     public static boolean findRotation(int[][] mat, int[][] target) {
-        int[][] finalAns = new int[mat.length][mat.length];
-        for (int i = 0; i < mat.length; i++) {
-            for (int j = 0; j <mat.length ; j++) {
-                finalAns[i][j]= mat[i][j];
+
+        for(int rotateCount = 0 ; rotateCount<4;rotateCount++){
+            if(checkEquality(mat, target)){
+                return true;
             }
-        }
-        for(int rotateCount = 0 ; rotateCount<=4;rotateCount++){
-            finalAns = rotateArrayBy90(finalAns);
-            boolean check = checkEquality(finalAns,mat);
-            if(check == true)
-                return check;
+            mat = rotateArrayBy90(mat);
         }
         return false;
     }
