@@ -1,25 +1,19 @@
 import java.util.*;
 public class AddToArrayFormOfInteger {
-    public static List<Integer> addToArrayForm(int[] num, int k) {
-        List<Integer> list = new ArrayList<>();
-        int carry =k ;
-        for(int i = num.length-1 ;i>=0;i--){
-            int sum = 0 ;
-            int digK = k%10;
-            sum = num[i]+carry;
-            if(sum>9){
-               list.add(0,sum%10);
-                carry = sum/10;
-                continue;
+
+        public static List<Integer> addToArrayForm(int[] num, int K) {
+            List<Integer> res = new LinkedList<>();
+            for (int i = num.length - 1; i >= 0; --i) {
+                res.add(0, (num[i] + K) % 10);
+                K = (num[i] + K) / 10;
             }
-            list.add(0,sum);
-            carry=carry/10;
+            while (K > 0) {
+                res.add(0, K % 10);
+                K /= 10;
+            }
+            return res;
         }
-        if (carry!=0){
-            list.add(0,carry);
-        }
-        return list;
-    }
+
 
     public static void main(String[] args) {
         int[] num ={9,9,9,9,9,9,9,9,9,9};
