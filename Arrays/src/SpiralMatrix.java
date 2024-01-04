@@ -1,8 +1,9 @@
 import java.util.*;
 public class SpiralMatrix {
+    // https://leetcode.com/problems/spiral-matrix/description/
+    // https://www.youtube.com/watch?v=3Zv-s9UUrFM
     public static List<Integer> spiralOrder(int[][] arr) {
-        // https://leetcode.com/problems/spiral-matrix/description/
-        // https://www.youtube.com/watch?v=3Zv-s9UUrFM
+
         List<Integer> list = new ArrayList<>();
         int n = arr.length;
         int m = arr[0].length;
