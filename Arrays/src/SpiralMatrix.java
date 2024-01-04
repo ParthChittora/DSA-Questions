@@ -14,7 +14,7 @@ public class SpiralMatrix {
                 list.add(arr[top][i]);
             }
             top++;
-            // bottom 
+            // bottom
             for (int i = top; i <= bottom; i++) {
                 list.add(arr[i][right]);
             }
