@@ -1,9 +1,9 @@
+import java.util.Arrays;
+
 public class SetMatrixRowColZero {
 //    https://leetcode.com/problems/set-matrix-zeroes/description/
     public static void setRowZero(int[][] matrix , int row){
-        for(int i = 0 ; i<matrix[row].length;i++){
-            matrix[row][i]=0;
-        }
+        Arrays.fill(matrix[row], 0);
     }
     public static void setColZero(int[][] matrix , int col){
         for(int i = 0 ; i<matrix.length;i++){
@@ -11,7 +11,7 @@ public class SetMatrixRowColZero {
         }
     }
     public static void setZeroes(int[][] matrix) {
-        boolean fr = false,fc = false;
+        boolean fr = false,fc = false; // Used to check whether the top row el is 0 or not 
         for(int i = 0; i<matrix.length;i++){
             for(int j =0 ; j< matrix[0].length;j++){
                 if(matrix[i][j]==0){
@@ -33,9 +33,7 @@ public class SetMatrixRowColZero {
             }
         }
         if(fr) {
-            for(int j = 0; j < matrix[0].length; j++) {
-                matrix[0][j] = 0;
-            }
+            Arrays.fill(matrix[0], 0);
         }
         if(fc) {
             for(int i = 0; i < matrix.length; i++) {
