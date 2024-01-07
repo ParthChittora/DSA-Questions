@@ -11,7 +11,7 @@ public class SetMatrixRowColZero {
         }
     }
     public static void setZeroes(int[][] matrix) {
-        boolean fr = false,fc = false; // Used to check whether the top row el is 0 or not 
+        boolean fr = false,fc = false; // Used to check whether the top row el is 0 or not
         for(int i = 0; i<matrix.length;i++){
             for(int j =0 ; j< matrix[0].length;j++){
                 if(matrix[i][j]==0){
