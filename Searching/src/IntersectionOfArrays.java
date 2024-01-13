@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 //https://leetcode.com/problems/intersection-of-two-arrays/description/
 public class IntersectionOfArrays {
-
     public static int[] intersection(int[] nums1, int[] nums2) {
         Set<Integer> h1 = new HashSet<>();
         Set<Integer> intersection = new HashSet<>();
@@ -28,4 +27,32 @@ public class IntersectionOfArrays {
         int[] arr2 = {2,3, 2};
         System.out.println(Arrays.toString(intersection(arr1, arr2)));
     }
+    // Without using hashset
+/*
+    public int[] intersection(int[] nums1, int[] nums2) {
+        int count=0;
+        short[] bucket = new short[1001];
+
+        for(int i=0;i<nums1.length;i++){
+            bucket[nums1[i]] = 2;
+        }
+
+        for(int i=0;i<nums2.length;i++){
+            if(bucket[nums2[i]]==2){
+                bucket[nums2[i]] = 1;
+                count += 1;
+            }
+        }
+
+        int[] ans = new int[count];
+        int j=0;
+        for(int i=0;i<nums2.length;i++){
+            if(bucket[nums2[i]]==1){
+                ans[j]=nums2[i];
+                j++;
+                bucket[nums2[i]]=0;
+            }
+        }
+        return ans;
+    } */
 }
