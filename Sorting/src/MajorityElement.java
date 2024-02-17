@@ -21,7 +21,7 @@ public class MajorityElement {
     public static void main(String[] args) {
         int[] arr = { 2,3,3,3,3,2,1,3};
         int ans =majorityElement(arr);
-        System.out.println(ansit);
+        System.out.println(ans);
     }
     }
 
