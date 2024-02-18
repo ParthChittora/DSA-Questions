@@ -7,7 +7,7 @@ public class SquareOfASortedArray {
         // }
         // Arrays.sort(nums);
         // return nums;
-        
+
         int[] result = new int[nums.length];
         if (nums.length == 1) {
             result[0] = nums[0] * nums[0];
