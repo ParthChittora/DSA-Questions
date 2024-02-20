@@ -33,7 +33,7 @@ public class MatrixCellsInDistanceOrder {
             arr[n1] = arr[n2];
             arr[n2] = temp;
         }
-    
+
 
     public static void main(String[] args) {
         int[][] ans = allCellsDistOrder(2, 2, 0, 1);
