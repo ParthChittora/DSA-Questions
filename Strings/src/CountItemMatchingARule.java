@@ -4,7 +4,7 @@ import java.util.List;
 public class CountItemMatchingARule {
     public static int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
 
-       
+
 
         switch(ruleKey){
             case "type": return search(items,ruleKey,ruleValue,0,0);
