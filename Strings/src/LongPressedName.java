@@ -1,11 +1,17 @@
 public class LongPressedName {
     public static boolean isLongPressedName(String name, String typed) {
-        for (int i = 0; i <typed.length() ; i++) {
-            if(typed.charAt(i)==typed.charAt(i+1)){
-                return typed.startsWith(name,i);
+        if(name.length()>typed.length()) return false;
+        int i=0,j=0;
+        while(j<typed.length()){
+            if(i<name.length()&&name.charAt(i)==typed.charAt(j)){
+                i++;
             }
+            else if(j==0 || typed.charAt(j)!=typed.charAt(j-1)){
+                return false;
+            }
+            j++;
         }
-        return false;
+        return i==name.length();
     }
     public static void main(String[] args) {
         String a = "alex";
